@@ -1,0 +1,123 @@
+/* Estilos adicionais personalizados */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.max-w-5xl > div {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para impressão */
+@media print {
+    body {
+        background-color: white !important;
+    }
+    
+    #themeToggle {
+        display: none !important;
+    }
+    
+    .shadow-xl, .shadow-lg, .shadow-2xl {
+        box-shadow: none !important;
+    }
+    
+    .hover\:shadow-xl, .hover\:shadow-2xl {
+        box-shadow: none !important;
+    }
+}
+
+/* Transições suaves para todos os elementos interativos */
+a, button, .transition-all, .transition-colors, .transition-transform {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Estilo para links */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Melhoria de contraste para acessibilidade */
+.dark .text-slate-300 {
+    color: #cbd5e1;
+}
+
+.dark .text-slate-400 {
+    color: #94a3b8;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Responsividade adicional para dispositivos muito pequenos */
+@media (max-width: 380px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .text-xl {
+        font-size: 1.125rem !important;
+    }
+}
